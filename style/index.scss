@@ -1,0 +1,152 @@
+@import 'reset';
+
+$blue-color: #02315E;
+$pale-color: #F6F5F8;
+$gray: #E7EAEF;
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    display: flex;
+}
+
+.link {
+    color: #00000095;
+    transition: 0.5s ease;
+}
+
+.link:hover {
+    color: #2F70AF;
+}
+
+
+.link::before {
+    content: "•";
+    margin-right: 10px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.bg-gray {
+    background-color: #2F70AF10;
+}
+
+.aside {
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-width: 450px;
+    height: 100vh;
+    background-color: $blue-color;
+    overflow-y: auto;
+    color: rgb(247, 247, 247);
+    font-weight: 500;
+    font-size: large;
+
+    &__header {
+        padding: 20px 40px;
+        background-color: #2F70AF;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__logo {
+        width: 150px;
+        height: 50px;
+    }
+
+    &__list {
+        margin-top: 40px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 14px;
+    }
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $pale-color;
+    overflow-y: auto;
+
+    &__logo {
+        width: 250px;
+        height: 100px;
+    }
+
+    &__header {
+        padding: 20px;
+        background-color: $gray;
+    }
+
+    &__logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 200px;
+        justify-content: center;
+    }
+
+    &__header h1 {
+        margin: 20px auto 0 auto;
+        font-weight: 500;
+        font-size: 24px;
+        text-align: center;
+        color: #00000080;
+        text-transform: uppercase;
+        max-width: 950px;
+    }
+}
+
+.content {
+
+    &__item {
+        padding: 20px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        margin-left: 50px;
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        margin-left: 25px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    &__image {
+        border-radius: 12px;
+        -webkit-box-shadow: 12px 10px 34px -15px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 12px 10px 34px -15px rgba(0, 0, 0, 0.75);
+        box-shadow: 12px 10px 34px -15px rgba(0, 0, 0, 0.75);
+    }
+}
+
+.pl-40 {
+    padding-left: 40px;
+}
+
+.pl-50 {
+    padding-left: 50px;
+}
